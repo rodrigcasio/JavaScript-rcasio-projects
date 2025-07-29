@@ -1,0 +1,20 @@
+<!DOCTYPE html> <!-- This is an example of using the document API document.getElementById()-->
+<html>
+    <head>
+        <script type="text/javascript">
+            function textChecker(){
+                var textField1 = document.getElementById("textField1");
+                if(textField1.value == ""){
+                    alert("Please type in the field!");
+                }else{
+                    alert("You typed: " + textField1.value);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Write something, and it will be displayed</h1>
+        <input type="text" id="textField1">
+        <input type="button" onclick="textChecker()" value="Submit">
+    </body>
+</html>
