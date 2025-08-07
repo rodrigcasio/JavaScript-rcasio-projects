@@ -50,22 +50,18 @@ console.log(bike2.getName());
 
 
 // =============================================================================
-
 console.log("----------------Prototype example \n");
 
-// Simple example of what prototype does:
-function animal(name){
+function animal(name){  // Simple example of what prototype does:
     this.name = name;
 }
 
 var animal1 = new animal("Tiger");  // object 
 
-// 1. method added:
-animal.prototype.printName = function () {
+animal.prototype.printName = function () {  // 1. method added:
     return this.name;
 }
-// 2nd method added:
-animal.prototype.makeNoise = function (){
+animal.prototype.makeNoise = function (){   // 2nd method added:
     console.log(this.name + " is making noise!");
 }
 console.log(animal1.printName());
@@ -73,8 +69,8 @@ animal1.makeNoise();
 
 // ===================================================================
 console.log("---------Example of using the prototype property with a regular function adding a shared method (function) ---- \n");
-// Using the .prototype property with a regular function and adding a shared method (function)
-function saySomething(){
+
+function saySomething(){// Using the .prototype property with a regular function and adding a shared method (function)
     console.log("Hello I am..");
 }
 saySomething.prototype.greeting = function (){
@@ -86,8 +82,8 @@ obj1.greeting();
 
 // ===================================================================
 console.log("---------Example of using the prototype property with a regular function adding a shared property (string) ---- \n");
-// example of using it as a shared property... (string)
-function saySomething2(){
+
+function saySomething2(){   // example of using it as a shared property... (string)
     console.log("Hello again...");
 }
 saySomething2.prototype.greeting2 = " I am a student as well from a different fucntion";
