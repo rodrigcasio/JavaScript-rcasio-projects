@@ -1,5 +1,7 @@
 
-// Example of a custom objecta
+// Demonstrating JavaScript Constructors, Prototypes, and Instance vs .Shared methods 
+
+// Example of a custom objects
 
 function Car(make, model, year){
     this.make = make;
@@ -45,3 +47,56 @@ motorcycle.prototype.getName = function() {
 
 console.log(bike1.getName());
 console.log(bike2.getName());
+
+
+// =============================================================================
+
+console.log("----------------Prototype example \n");
+
+// Simple example of what prototype does:
+function animal(name){
+    this.name = name;
+}
+
+var animal1 = new animal("Tiger");  // object 
+
+// 1. method added:
+animal.prototype.printName = function () {
+    return this.name;
+}
+// 2nd method added:
+animal.prototype.makeNoise = function (){
+    console.log(this.name + " is making noise!");
+}
+console.log(animal1.printName());
+animal1.makeNoise();
+
+// ===================================================================
+console.log("---------Example of using the prototype property with a regular function adding a shared method (function) ---- \n");
+// Using the .prototype property with a regular function and adding a shared method (function)
+function saySomething(){
+    console.log("Hello I am..");
+}
+saySomething.prototype.greeting = function (){
+    console.log(" a student!");
+}
+var obj1 = new saySomething();
+obj1.greeting();
+
+
+// ===================================================================
+console.log("---------Example of using the prototype property with a regular function adding a shared property (string) ---- \n");
+// example of using it as a shared property... (string)
+function saySomething2(){
+    console.log("Hello again...");
+}
+saySomething2.prototype.greeting2 = " I am a student as well from a different fucntion";
+console.log(saySomething2.prototype.greeting2);  // using the value
+
+
+
+// ===================================================================
+console.log("--- using the same function saySomething2() but creating an instance and using the function as a constructor: -------");
+
+var instance1 = new saySomething2();
+console.log(instance1.greeting2);   // no need for prototype keyword here
