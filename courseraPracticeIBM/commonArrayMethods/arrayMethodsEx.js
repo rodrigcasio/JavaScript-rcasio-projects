@@ -35,7 +35,7 @@ const products2 = [
 ];
 function filterProductsByPriceRange(products2, minPrice, maxPrice){
     return products2.filter((product) => product.price >= minPrice && product.price <= maxPrice);   // using the array method as the returned value of this function
-}
+}   // .filter creates a new array that satifies the condition 
 const minPrice = 500;   // min threshold 
 const maxPrice = 1200;  // max threshold
 const filteredProducts = filterProductsByPriceRange(products2, minPrice, maxPrice);  // calling the function
