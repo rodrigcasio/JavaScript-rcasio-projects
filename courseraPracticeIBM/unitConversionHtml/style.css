@@ -1,0 +1,142 @@
+/* sets the margin of all the element to 10px on all sides and the background-color to black */
+body {
+    margin: 10px;
+    background-color: black;
+}
+
+/* Home section  which has the app name and nav bar. The styling is applied by id */
+#home {
+    margin-top: -1cm;
+    margin-left: -1cm;
+    margin-right: -1cm;
+    padding-bottom: 2cm;
+    padding-top: 2cm;
+    background-color: #483355;
+}
+
+/* Application name inside the home section. The styling is applied by tag name */
+header {
+    font-size: 30px;
+    color: rgb(240, 234, 245);
+    float: left;
+    padding-left: 2cm;
+}
+
+/* navigation bar container */
+.topdiv {
+    float: right;
+    padding-right: 1cm;
+}
+
+/* navigation bar buttons */
+.topmenu {
+    color: lightgray;
+    background-color: #483355;
+    margin: 10px;
+    padding: 10px;
+    border: 1mm;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.topmenu:hover {
+    color: white;
+    font-weight: bolder;
+    background-color: #383742;
+    text-decoration: underline;
+}
+
+/* 3 conversion section */
+#all-conversion-section {
+    justify-content: center;
+    display: grid;
+}
+
+figure {
+    float: left;
+    justify-self: auto;
+    width: 200px;
+}
+
+img {
+    width: 200px;
+}
+
+figcaption {
+    color: black;
+    font-size: 17px;
+    text-align: center;
+}
+
+button {
+    font-size: 15px;
+    border: transparent;
+    border-radius: 40px;
+    width: fit-content;
+    background-color: rgb(104, 238, 144);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(100, 190, 140);
+}
+
+button:active {
+    background-color: rgb(80, 189, 50);
+}
+
+/* The calculator panel */
+.b {
+    border-top-style: solid;
+    border-top-width: 20px;
+    border-radius: 10px;
+    background-color: white;
+    width: 600px;
+    height: 400px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+}
+
+.temperature {
+    border-top-color: green;
+}
+
+.weight {
+    border-top-color: coral;
+}
+
+.distance {
+    border-top-color: cyan;
+}
+
+legend {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+/* floating icon home button */
+.iconbutton {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: rgb(225, 235, 235);
+    display: flex;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+}
+
+.iconbutton img {
+    width: 30px;
+}
+
+/* footer of the page  */
+footer {
+    background-color: rgb(240, 234, 245);
+    margin-top: 20px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>  <!-- This is a practice for structural elements from IBM fullstack course -->
+<html>
+    <head>
+        <title>Unit Conversions</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <section id="home"> <!-- top section of the website -->
+            <header><p>Unit Conversions</p></header>    <!-- <b> bold -->
+            <nav>
+                <!-- buttons to redirect users to different temperature sections -->
+                <div class="topdiv">
+                <a href="#temperature"><button class="topmenu">Temperature</button></a>
+                <a href="#weight"><button class="topmenu">Weight</button></a>
+                <a href="#distance"><button class="topmenu">Distance</button></a>
+                </div>
+            </nav>
+        </section>
+
+        <div id="all-conversion-section">
+
+            <section id="temperature" class="b temperature">  
+                <div id="tmp">
+                    <figure>
+                        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/thermo.png" width="200px">
+                        <figcaption>Celsius to Fahrenheit Conversion</figcaption>
+                    </figure>
+                    
+                    <article>
+                        <!-- This contains the specific elements for temperature conversion -->
+                        <fieldset>  <!-- like a box -->
+                            <legend>Temperature</legend>
+                            <!-- label for temp input -->
+                            <label for="celsius">Celsius</label><br>
+                            
+                            <input type="number" id="celsius">
+                            <br><br>
+                            <!-- The conversion button -->
+                            <button id="temperature" onclick="convertTemp()"> Convert </button>
+                            <br><br>
+                            <!-- label for temp output -->
+                            <input type="number" id="fahrenheit"><br>
+
+                            <label for="fahrenheit">Fahrenheit</label>
+                        </fieldset>
+                    </article>
+                    
+                    <aside>
+                        To convert celsius to fahrenheit yourself, use this formula replacing the 'C' with your temperature in celsius: (C x 9/5) + 32.
+                    </aside>
+                </div>
+            </section>
+
+            <!-- 2nd section-->
+            <section id="weight" class="b weight">
+                <div id="wgt">
+                    <figure>
+                        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/weight.png" width="200px">
+                        <figcaption>Kilograms to Pounds Conversion</figcaption>                       
+                    </figure>
+                    
+                    <article>
+                        <!-- here contains the elements for the weight  conversion -->
+                        <fieldset> <!-- like a box -->
+                            <legend>Weight</legend>
+
+                            <label for="kilograms">Kilograms</label><br>
+
+                            <input type="number" id="kilograms">
+                            <br><br>
+                            <button id="weight" class="weight" onclick="convertWeight()"> Convert </button> 
+                            <br><br>
+                            <input type="number" id="pounds"><br>
+
+                            <label for="pounds">Pounds</label>
+                        </fieldset>
+                    </article>
+                    <aside>
+                        To convert kilograms to pounds yourself, use this formula replacing the 'kg' with your weight in kilograms: kg x 2.205.
+                    </aside>
+                </div>
+            </section>
+            
+            <!-- 3rd section -->
+            <section id="distance" class="b distance">
+                <div id="dst">
+                    <figure>
+                        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/speedo.png" width="200px">
+                        <figcaption>Kilometer to Mile Conversion</figcaption>
+                    </figure>
+                    
+                    <article>
+                        <fieldset>
+                            <legend>Distance</legend>
+
+                            <label for="kilometers">Kilometers</label><br>
+
+                            <input type="number" id="kilometers">
+                            <br><br>
+                            <button id="distance" onclick="convertDistance()"> Convert </button>
+                            <br><br>
+                            <input type="number" id="miles"><br>
+
+                            <label for="miles">Miles</label><br>
+                        </fieldset>
+                    </article>
+
+                    <aside>
+                        To convert kilometers to miles yourself, use this formula replacing the 'km' with your distance in kilometers: (km * 0.62137)
+                    </aside>
+                </div>
+            </section>
+        </div>
+
+        <div id="go-home" class="iconbutton">
+            <a href="#home"> <!-- making an image an anchor to go back to the home section -->
+                <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg">
+            </a>
+        </div>
+
+        <footer>Learn more about HTML as part of the IBM Fullstack Cloud Developer Certification</footer>
+
+    </body>
+</html>
