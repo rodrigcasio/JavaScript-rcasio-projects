@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+
+        <script type="application/javascript">
+            function checkdata(){
+                // create  references to the input elements we wish to validate
+                var username = document.getElementById("name");
+                var emailAddress = document.getElementById("email");
+                if(username.value == ""){   
+                    alert("Please enter your name");
+                    username.focus();
+                    return false;
+                }
+                if(emailAddress.value == ""){
+                    alert("Please enter your email");
+                    emialid.focus();
+                    return false;
+                }
+                return true;    // if both input well written, return true.
+            }
+        </script>
+        <title>Contact Details</title>
+    </head>
+    <body>
+
+        <h2>Enter your contact details:</h2><br>
+        <form id="form1" onsubmit="return checkdata()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+
+    </body>
+</html>
