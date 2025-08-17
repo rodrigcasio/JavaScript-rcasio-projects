@@ -38,7 +38,7 @@ motorcycle.prototype.color = "red"; // adding a property to every instance of mo
 console.log(bike1.color); // output red;
 
 bike2.color = "blue";
-console.log(bike2.color);  
+console.log(bike2.color);  // output blue;
 
 // adding a method to the prototype motorcycle  after declaring the cosntructor.
 motorcycle.prototype.getName = function() {
@@ -94,5 +94,5 @@ console.log(saySomething2.prototype.greeting2);  // using the value
 // ===================================================================
 console.log("--- using the same function saySomething2() but creating an instance and using the function as a constructor: -------");
 
-var instance1 = new saySomething2();
-console.log(instance1.greeting2);   // no need for prototype keyword here
+var instance1 = new saySomething2();    // output : Hello again... 
+console.log(instance1.greeting2);   // no need for prototype keyword here   | output : I am a student as well from a differnet functions
