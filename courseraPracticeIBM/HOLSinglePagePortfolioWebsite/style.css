@@ -26,6 +26,8 @@ body {
 .topmenu:hover {
   color: white;
   /* Add the styles here */
+  font-weight: bolder;
+  text-decoration: underline;
 }
 
 .topdiv {
@@ -37,6 +39,8 @@ body {
   float: left;
   padding-left: 2cm;
   /* Add the styles here */
+  color: #D0E4EE;
+  font-size: 40px;
 }
 
 .profile_name .contact_info {
@@ -131,7 +135,7 @@ h2 {
 }
 
 .skill img {
-  height: 35px;
+  height: 85px;
   align-items: center;
 }
 
