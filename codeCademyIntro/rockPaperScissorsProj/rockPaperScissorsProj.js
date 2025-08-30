@@ -36,11 +36,11 @@ const determineWinner = (userChoice, computerChoice) => {
     }else if(userChoice === 'bomb'){
         return computerChoice === 'bomb' ? 'Huge explosion takes place! Both players loose' : 'User wins!';   
     }else if(userChoice === 'rock'){  // 8.
-        return computerChoice === 'paper' || 'bomb' ? 'Computer wins!' : 'User wins!';
+        return (computerChoice === 'paper' || computerChoice === 'bomb') ? 'Computer wins!' : 'User wins!';
     }else if(userChoice === 'paper'){   // 9.
-        return computerChoice === 'scissors' || 'bomb' ? 'Computer wins!' : 'User wins!';
+        return (computerChoice === 'scissors' || computerChoice === 'bomb') ? 'Computer wins!' : 'User wins!';
     }else{  // 10.
-        return computerChoice === 'rock' || 'bomb' ? 'Computer wins!' : 'User wins!';
+        return (computerChoice === 'rock' || computerChoice === 'bomb') ? 'Computer wins!' : 'User wins!';
     }
 }
 
