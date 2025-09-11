@@ -1,5 +1,8 @@
 // Training Days Project
+// this program randomly assigns an event and calculates training days for each atlhete.
 
+
+// returns a random event for the athlete 
 const getRandEvent = () => {     
     let random = Math.floor(Math.random() * 3);           // getting random number, moved to be a block scope 
 
@@ -13,21 +16,17 @@ const getRandEvent = () => {
 };
 
 const getTrainingDays = event => {
-    let days = 0;       // 1.  
+    let days = 0;
 
-    if(event === 'Marathon'){
-        days = 50;         // letting days change its value from the if block scope
-    }else if(event === 'Triathlon'){
-        days = 100;
-    }else if(event === 'Pentathlon'){
-        days = 200;
+    switch(event){
+        case 'Marathon': days = 50; break;
+        case 'Triathlon': days = 100; break;
+        case 'Pentathlon': days = 200; break;
+        defalt: console.log(`Unknown event`);
     }
     return days;
 };
 
-
-// moved name as a global scope
-const name = 'Nala';
 
 const logEvent = (name, event) => {
     console.log(`${name}'s event is: ${event}`);
@@ -37,19 +36,19 @@ const logTime = (name, days) => {
     console.log(`${name}'s time to train is ${days} days`);
 }
 
+// moved name as a global scope
+const name = 'Nala';
 
 const event = getRandEvent();
 const days = getTrainingDays(event);
-
 logEvent(name, event);
 logTime(name, days);
 
 console.log(`-----`);
-// new competitor
+// new competitor with new global variables
 
 const event2 = getRandEvent();
 const days2 = getTrainingDays(event2);
 const name2 = 'Warren'; 
-
 logEvent(name2, event2);
 logTime(name2, days2);
