@@ -15,5 +15,23 @@ for(let i = 0; i < bobsFollowers.length; i++){
     }
 }
 
-console.log(`---`);
 console.log(mutualFollowers);
+
+
+console.log(`---`);
+
+// second example
+const array1 = [32, 223, 54, 67];
+const array2 = [55, 67, 544, 32];
+const array3 = [];
+
+for(let i = 0; i < array1.length; i++){
+    for(let j = 0; j < array2.length; j++){
+        if(array1[i] === array2[j]){
+            console.log(`${array1[i]} apears in both arrays!`);
+            array3.push(array1[i]);
+        }
+    }
+}
+
+console.log(array3);
