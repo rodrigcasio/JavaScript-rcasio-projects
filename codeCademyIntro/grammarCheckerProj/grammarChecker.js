@@ -21,11 +21,11 @@ storyWords = storyWords.filter(word => {        // 6. remove the word 'literally
     }
 });
 */
+
 // fixed with using TO 
 storyWords = storyWords.filter(word => word !== unnecessaryWord);   // 6. 
 
-
-
+// --------
 /*
 storyWords = storyWords.map(word => {           // 7.  modify the misspelled word
     if(word === misspelledWord){
@@ -39,6 +39,7 @@ storyWords = storyWords.map(word => {           // 7.  modify the misspelled wor
 // fixed with using TO oneline
 storyWords = storyWords.map(word => word === misspelledWord ? 'beautiful' : word);      // 7.
 
+// --------
 /*
 const badWordIndex = storyWords.findIndex(wordIndex => {        // 8.
     if(wordIndex === badWord){
@@ -50,6 +51,7 @@ const badWordIndex = storyWords.findIndex(wordIndex => {        // 8.
 // fixed with using TO oneline 
 const badWordIndex = storyWords.findIndex(word => word === badWord);
 
+// --------
 console.log(`the badWord index is: ${badWordIndex}`);   //  // 8. finding out the index of the bad word
 
 storyWords[78] = 'really';  // 9. changing the bad word with the index
@@ -83,8 +85,6 @@ console.log(`the index of the word with more than 10 characters ${indexOfWordCha
 storyWords[111] = 'glorious';           // changing word manually with its index
 
 console.log(storyWords.join(' '));  // 1
-
-
 
 
 
