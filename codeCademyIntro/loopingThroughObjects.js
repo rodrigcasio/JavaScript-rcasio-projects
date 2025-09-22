@@ -35,7 +35,7 @@ for(let crewMem in spaceship.crew){
 console.log(`---`);
 
 for(let crewMem in spaceship.crew){
-    console.log(`${crewMem}: ${spaceship.crew[crewMem].degree}`);
+    console.log(`${spaceship.crew[crewMem].name}: ${spaceship.crew[crewMem].degree}`);
 }
 
 
