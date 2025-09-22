@@ -26,7 +26,8 @@ remotelyDisable(spaceship);
 console.log(spaceship);
 
 
-console.log(`------`);
+
+console.log(`---------`);
 // --- IMPORTANT example:
 
 let spaceship2 = {
