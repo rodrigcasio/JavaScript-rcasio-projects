@@ -1,4 +1,6 @@
 // Meal Maker   
+// Extra practice at the bottom:
+
 
 const menu = {      // 1.
     _meal: '',      // 2.
@@ -55,9 +57,29 @@ menu.price = random.price;
 console.log(menu.todaysSpecial);
 
 /*
-// another way 
-const random2 = Math.floor(Math.random * meals.length);
-menu.meal = meals[random2];
-menu.price = meals[random2];
+    Explanation for const random: meals[Math.floor(Math.random() * meals.length)];
+
+    the variable 'random' holds one object from the meals array.
+    Each object in meals has two properties: 'meal' (a string) and 'price' (a number).
+
+
+    when we write:
+
+    menu.meal = random.meal;
+    menu.price = random.price;
+
+    - 'random.meal' gets the 'meal' value from the chosen object (like 'Pizza')
+    - 'random.price' gets the 'price' value from the smae object (like '12.99')
+
+    These values are passed down to the setters in the 'menu' object, which update _meal and _price safely.
+
+
+// another way  more verbose, but it does work:
+
+const random2 = Math.floor(Math.random() * meals.length);
+menu.meal = meals[random2].meal;
+menu.price = meals[random2].price;
 console.log(menu.todaysSpecial);
 */
+
+
