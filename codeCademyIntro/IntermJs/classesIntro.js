@@ -1,25 +1,30 @@
 // Example of using classes
 
 class Dog {
-    constructor(name){
-        this.name = name;
-        this.behavior = 0;
+    constructor(name, behavior = '0'){
+        this._name = name;
+        this._behavior = behavior;
     }
 
-    get name(){
-        return this.name;
+    get name(){             // must have getters for the atributes '_name and _behavior', otherwise they will be undefined
+        return this._name;
     }
 
     get behavior(){
-        return this.behavior;
+        return this._behavior;
     }
     
-    incrementBehavior(newB){
-        if (typeof newB === 'number' && newB > 0){
-            this.behavior = newB;
-        } else {
-            console.log(`Couldn't set new behavior. Please add a number as input`);
-        }   
+    incrementBehavior(){
+        this._behavior++;
     }
 }
 
+const halley = new Dog('Halley');
+
+console.log(halley.name);
+console.log(halley.behavior);
+
+halley.incrementBehavior();
+
+console.log(halley.name);
+console.log(halley.behavior);
