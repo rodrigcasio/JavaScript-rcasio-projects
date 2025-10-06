@@ -1,11 +1,9 @@
 // Small porject practice for Classes in JS
 
-
 class Catalog {     // 25.5
     static _mediaAvailable = [];
 
     static get mediaAvailable(){
-        console.log(`=== Catalog Of The Current Media Available in The Library ===`);
         return this._mediaAvailable;
     }
     static set addMedia(media){
@@ -76,7 +74,7 @@ class Book extends Media {      // 9.
         super(title);   // 11.
         this._author = author;  // 12.
         this._pages = pages;
-        Catalog.addMedia = this;         // adding this book into the Catalog array mediaAvailable[]
+        Media.addMedia = this;         // adding this book into the Catalog array mediaAvailable[]
     }
 
     get author(){               // 13. 
@@ -105,7 +103,7 @@ class Movie extends Media {
         this._director = director;
         this._runTime = runTime;
         this._movieCast = [];
-        Catalog.addMedia = this;
+        Media.addMedia = this;
     }
     get director(){
         return this._director;
@@ -132,7 +130,7 @@ class CD extends Media {
         super(title);
         this._artist = artist;
         this._songs = [];
-        Catalog.addMedia = this;
+        Media.addMedia = this;
     }
     get artist(){
         return this._artist;
@@ -158,6 +156,8 @@ class CD extends Media {
     }
 
     shuffle(){
+
+        console.log('=== Your shuffle ===')
         // Fisher-Yates shuffle algorithm:
         
         const shuffledSongs = this.songs.slice();
@@ -239,6 +239,7 @@ continuum.addSong(`I'm Gonna Find Another You`, 163);
 console.log(continuum.shuffle());
 
 // printing catalog of the library:
+console.log(`=== Catalog Of The Current Media Available in The Library ===`);
 console.log(Catalog.mediaAvailable);
 
 
