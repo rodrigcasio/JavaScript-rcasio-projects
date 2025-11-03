@@ -1,6 +1,6 @@
 // Import the functions from encryptors.js here.
 const encryptors = require(`./encryptors.js`);
-
+const { caesarCipher, symbolCipher, reverseCipher } = encryptors;
 
 // User Input / Output Logic
 /////////////////////////////////////////////
@@ -12,7 +12,7 @@ process.stdin.on('data', (userInput) => {
 
 /* Helper function for determining which cipher method
 the user chose when they ran the program. */
-function getEncryptionMethod() {
+const getEncryptionMethod () => {
   let encryptionMethod;
   
   const encryptionType = process.argv[2];  
@@ -38,7 +38,7 @@ function getEncryptionMethod() {
 }
 
 /* Helper function for displaying the encrypted message to the user. */
-function displayEncryptedMessage(encryptionMethod, userInput) {
+const displayEncryptedMessage = (encryptionMethod, userInput) => {
   let str = userInput.toString().trim();    
   let output = encryptionMethod(str);
   process.stdout.write(`\nHere is your encrypted message:\n> ${output}\n`)
