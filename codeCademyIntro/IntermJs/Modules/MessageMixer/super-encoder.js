@@ -5,7 +5,7 @@ const encodeMessage = (str) => {
 }
 
 const decodeMessage = (str) => {
-  return caesarCipher(symbolCipher(reverseCipher(str, -6)));
+  return caesarCipher(symbolCipher(reverseCipher(str)), -6);
 }
 
 // User input / output.
