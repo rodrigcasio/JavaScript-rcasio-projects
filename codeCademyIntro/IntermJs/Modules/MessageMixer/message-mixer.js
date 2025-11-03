@@ -12,7 +12,7 @@ process.stdin.on('data', (userInput) => {
 
 /* Helper function for determining which cipher method
 the user chose when they ran the program. */
-const getEncryptionMethod = () => {
+function getEncryptionMethod() {
   let encryptionMethod;
   
   const encryptionType = process.argv[2];  
