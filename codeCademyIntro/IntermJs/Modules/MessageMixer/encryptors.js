@@ -40,8 +40,9 @@ const symbolCipher = (str) => {
   }
 
   let output = '';
-  for (let i = 0; i < str.length; i++) {
-    let char = str.toLowerCase()[i];
+  const lowerStr = str.toLowerCase();
+  for (let i = 0; i < lowerStr.length; i++) {
+    let char = lowerStr[i];
 
     if (symbols[char]) {
       output += symbols[char]

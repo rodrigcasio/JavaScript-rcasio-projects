@@ -15,10 +15,11 @@ const handleInput = (userInput) => {
   let output;
   if (process.argv[2] === 'encode') {
     output = encodeMessage(str);
-  } 
-  if (process.argv[2] === 'decode') {
+  } else if (process.argv[2] === 'decode') {
     output = decodeMessage(str);
-  } 
+  } else {
+    process.stdout.write(`Please use 'encode' or 'decode' as a command.\n`);
+  }
   
   process.stdout.write(output + '\n');
   process.exit();
