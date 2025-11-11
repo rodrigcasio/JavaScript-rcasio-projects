@@ -1,5 +1,5 @@
 
-const toggleHiddenElement(domElement) => {
+const toggleHiddenElement = (domElement) => {
   if (domElement.style.display === 'none') {
     domElement.style.display = 'block';
   } else {
@@ -12,7 +12,8 @@ const changeToFunkyColor = (domElement) => {
   const g = Math.random() * 255;
   const b = Math.random() * 255;
   
-  domElement.style.background = `rgb(${r}, ${g}, ${b}`;
+  domElement.style.background = `rgb(${r}, ${g}, ${b})`;
+
 }
 
-export { toggleHiddenElement, changeToFunkyColor }
+export { toggleHiddenElement, changeToFunkyColor };
